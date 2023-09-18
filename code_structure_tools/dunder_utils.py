@@ -13,3 +13,24 @@ def __getattr__(self,name):
     if name[:2] == "__":
         raise AttributeError(name)
 """
+
+
+class MyClass:
+    """
+    Example of how to implement a getattr that allows for
+    1) deepcopy
+    2) hasattr not to throw error if no attribute
+    """
+    def __init__(self,x):
+        self.x = x
+        
+    def __getattr__(self,k):
+        if name[:2] == "__":
+            raise AttributeError(name)
+        if int(k) < 10:
+            return k
+        else:
+            return self.__getattribute__(k)
+        
+obj = MyClass(90)
+hasattr(obj,"11")
