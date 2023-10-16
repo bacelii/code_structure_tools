@@ -11,4 +11,4 @@ def functions_in_object(obj,verbose = True):
                   and "__" != method_name[:2]]
     return object_methods
 
-import object_utils as obju
+from . import object_utils as obju

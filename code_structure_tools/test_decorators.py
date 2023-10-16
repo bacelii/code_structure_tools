@@ -15,7 +15,7 @@ parameter_set = dict(
 )
 
 
-from decorators import default_args,regular_wrapper
+from .decorators import default_args,regular_wrapper
 
 @default_args()
 def print_hello(

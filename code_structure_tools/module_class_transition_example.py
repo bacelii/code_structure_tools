@@ -6,8 +6,8 @@ Application: To test out the decorators
 that add functions to classes
 
 """
-from decorators import default_args,add_func
 
+from .decorators import default_args,add_func
 address = "1882 Hidden Glen"
 last_name = "Celii"
 hourly_rate = 100

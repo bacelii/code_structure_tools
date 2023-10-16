@@ -1,7 +1,7 @@
 import inspect
 import sys
 from functools import wraps,partial,update_wrapper
-import function_utils as fu
+
 import numpy as np
 
 prefix = ""
@@ -291,5 +291,5 @@ def module_calling_func(
     return mod
 
     
-    
-import decorators as dcu
+from . import function_utils as fu
+from . import decorators as dcu

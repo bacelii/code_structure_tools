@@ -22,7 +22,7 @@ def all_callable_in_module(
 
 functions_in_module = all_callable_in_module
 
-import module_utils as modu
+from . import module_utils as modu
                 
             
             

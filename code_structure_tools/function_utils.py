@@ -40,10 +40,10 @@ def module_calling_func(
     return mod
 
 
-import object_utils as obju
+from . import object_utils as obju
 functions_in_object = obju.functions_in_object
 
-import module_utils as modu
+from . import module_utils as modu
 functions_in_module = modu.functions_in_module
 
-import function_utils as fu
+from . import function_utils as fu
