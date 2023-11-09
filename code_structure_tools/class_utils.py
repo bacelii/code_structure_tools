@@ -11,3 +11,16 @@ def example_class_inside_class():
 
         def __init__(self):
             self.inner_obj = self.Inner()
+            
+            
+            
+def example_referencing_class_from_inside_with_dunder():
+    class A:
+        def __init__(self):
+            print(__class__)
+
+
+    A()
+    
+    
+    

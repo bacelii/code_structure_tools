@@ -186,9 +186,8 @@ def unpacking_obj_to_function(f):
         attr_dict = attribute_dict_from_function_obj_overlap(
             f,self
         )
-        
-        kwargs.update(attr_dict)
-        return f(*args,**kwargs)
+        attr_dict.update(kwargs)
+        return f(*args,**attr_dict)
     return new_func
 
 def send_obj_to_function(f,obj_name=None):

@@ -19,15 +19,30 @@ def get_links():
     return [
         #"datasci_tools @ git+https://github.com/bacelii/datasci_tools.git'"
     ]
+    
+def get_long_description(filepath='README.md'):
+    try:
+        import pypandoc
+        long_description = pypandoc.convert_file(filepath, 'rst') 
+    except:
+        print("\n\n\n****Need to install pypandoc (and if havent done so install apt-get install pandoc) to make long description clean****\n\n\n")
+        
+        long_description = Path("README.md").read_text()
+        
+    return long_description
 
 
 
 setup(
-    name='code_struture_tools', # the name of the package, which can be different than the folder when using pip instal
-    version='1.0.0',
-    description='',
-    author='Brendan Celii',
-    author_email='brendanacelii',
+    name='code_structure_tools', # the name of the package, which can be different than the folder when using pip instal
+    version='1.0.1',
+    description='Tools for managing functions, classes and other native code structures in python',
+    long_description=get_long_description(),
+	project_urls={
+	    'Source':"https://github.com/reimerlab/code_structure_tools",
+	},
+	author='Brendan Celii',
+	author_email='brendanacelii@gmail.com',
     packages=find_packages(),  #teslls what packages to be included for the install
     install_requires=get_install_requires(), #external packages as dependencies
     # dependency_links = get_links(),
