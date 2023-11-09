@@ -35,7 +35,7 @@ def get_long_description(filepath='README.md'):
 
 setup(
     name='code_structure_tools', # the name of the package, which can be different than the folder when using pip instal
-    version='1.0.1',
+    version='1.0.2',
     description='Tools for managing functions, classes and other native code structures in python',
     long_description=get_long_description(),
 	project_urls={
